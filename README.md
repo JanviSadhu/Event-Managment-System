@@ -9,7 +9,7 @@ A Java-based Event Management System developed as part of the Advanced Object Or
 | [Team Member 1 - Janvi sadhu]| Event class |
 | [Team Member 2 - Samarth patel] | Organizer class |
 | [Team Member 3 - Megha patel] | Participant class |
-| [Team Member 4] | Registration class |
+| Registration class |
 
 ## Project Description
 
@@ -18,7 +18,7 @@ This system allows organizers to create events and participants to register for 
 ## Technologies
 
 - Java 17+
--
+
 
 ## Project Structure
 
