@@ -1,34 +1,18 @@
 package model;
 
-import java.time.LocalDate;
-
 public class Registration {
+	private int id;
+    private String name;
+    private String email;
 
-    private int registrationId;
-    private Event event;
-    private Participant participant;
-    private LocalDate date;
-
-    public Registration(int registrationId, Event event, Participant participant) {
-        this.registrationId = registrationId;
-        this.event = event;
-        this.participant = participant;
-        this.date = LocalDate.now();
+    public Registration(int id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
     }
 
-    // Getters & Setters
-    public int getRegistrationId() { return registrationId; }
-    public Event getEvent() { return event; }
-    public Participant getParticipant() { return participant; }
-    public LocalDate getDate() { return date; }
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public String getEmail() { return email; }
 
-    @Override
-    public String toString() {
-        return "Registration{" +
-                "id=" + registrationId +
-                ", event=" + event.getName() +
-                ", participant=" + participant.getName() +
-                ", date=" + date +
-                '}';
-    }
 }

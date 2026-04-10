@@ -1,18 +1,22 @@
 package advance.oop.lab;
 
+import dao.*;
+import model.*;
+
 public class Main {
 
-	 public static void showMenu() {
+    public static void main(String[] args) {
 
-	        System.out.println("+++++++++++++++++EVENT MANAGEMENT SYSTEM++++++++++");
-	        System.out.println("1. Create Event");
-	        System.out.println("2. View Events");
-	        System.out.println("3. Add Participant");
-	        System.out.println("4. Register Participant");
-	        System.out.println("5. View Participants of Event");
-	        System.out.println("6. Export Data");
-	        System.out.println("0. Exit");
-	        System.out.print("Enter your choice: ");
-	    }
+        EventDAO eventDAO = new EventDAO();
+        ParticipantDAO participantDAO = new ParticipantDAO();
+        RegistrationDAO registrationDAO = new RegistrationDAO();
 
+        Event e = new Event("Food Fest", 50);
+        Participant p = new Participant("Sam", "sam@gmail.com");
+
+        int eventId = eventDAO.addEvent(e);
+        int participantId = participantDAO.addParticipant(p);
+
+        registrationDAO.register(eventId, participantId);
+    }
 }
