@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+    <section class="panel">
+        <h1>Event Management System</h1>
+        <p>Minimal Iteration 4 frontend connected to the Spring Boot REST API.</p>
+
+        <form id="event-form" class="card">
+            <h2>Add Event</h2>
+            <input name="id" type="number" placeholder="Event ID" required>
+            <input name="name" type="text" placeholder="Event Name" required>
+            <input name="location" type="text" placeholder="Location" required>
+            <input name="date" type="text" placeholder="Date (YYYY-MM-DD)" required>
+            <input name="maxParticipants" type="number" placeholder="Max Participants" required>
+            <button type="submit">Create Event</button>
+        </form>
+
+        <form id="participant-form" class="card">
+            <h2>Add Participant</h2>
+            <input name="id" type="number" placeholder="Participant ID" required>
+            <input name="name" type="text" placeholder="Participant Name" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <button type="submit">Create Participant</button>
+        </form>
+
+        <form id="registration-form" class="card">
+            <h2>Register Participant</h2>
+            <input name="eventId" type="number" placeholder="Event ID" required>
+            <input name="participantId" type="number" placeholder="Participant ID" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <div class="toolbar">
+            <h2>Events</h2>
+            <button id="refresh-events" type="button">Refresh</button>
+        </div>
+        <div id="message"></div>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Max</th>
+            </tr>
+            </thead>
+            <tbody id="events-body"></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
